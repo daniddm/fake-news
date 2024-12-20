@@ -1,0 +1,21 @@
+<div class="container" style="font-family: 'Times New Roman', Times, serif;">
+    <h1>Detector de Fake News</h1>
+    
+    <div class="form-group">
+      <label for="newsText">Ingrese la noticia a analizar:</label>
+      <textarea 
+        id="newsText"
+        [(ngModel)]="newsText" 
+        class="form-control" 
+        rows="6"
+        placeholder="Pegue aquí el texto de la noticia...">
+      </textarea>
+    </div>
+  
+    <button 
+      (click)="analyzeNews()" 
+      class="submit-button"
+      [disabled]="!newsText">
+      Analizar Noticia
+    </button>
+</div>
